@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/CSS/style-BlackJack.css">
+ </head>
+ <body>
+    
+    <header class="titulo">
+        BlackJack
+    </header>
+
+    <!--Botones del Juego-->
+    <div class="row mt-2">
+        <div class="col text-center">
+            <button id="btnNuevo" class="btn btn-danger ">Nuevo Juego</button>
+            <button id="btnPedir" disabled="disabled" class="btn btn-primary">Pedir Cartas</button>
+            <button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
+        </div>
+    </div>
+    
+    <!--Jugador 1-->
+    <div class="row container">
+        <div class="col">
+            <h1>Jugador 1 - <small>0</small></h1>
+            <div id="jugador-cartas" class="divCartas">
+                <!-- <img class="cartas" src="assets/cartas/10C.png"> -->
+            </div>
+        </div>
+    </div>
+
+    <!--Computadora-->
+    <div class="row container mt-2">
+        <div class="col">
+            <h1>Computadora - <small>0</small></h1>
+            <div id="computadora-cartas" class="divCartas">
+                <!-- <img class="cartas" src="assets/cartas/2C.png"> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/JS/Undescore-min.js"></script>
+    <script src="assets/JS/BlackJack-min.js"></script>
+
+    <script>
+
+        document.querySelector('#btnNuevo').addEventListener('click', () =>{
+            miModulo.nuevoJuego();
+
+        });
+    </script>
+ </body>
+ </html>
